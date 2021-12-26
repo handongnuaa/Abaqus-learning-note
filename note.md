@@ -27,4 +27,9 @@ Type "help", "copyright", "credits" or "license" for more information.”
 *SNIPER = symbolicConstants.SymbolicConstants('SNIPER')*  
 *CRYSTAL_MAIDEN = symbolicConstants.SymbolicConstants('CRYSTAL_MAIDEN')*
 
-每个符号常量包含名字(name)属性和内部序号(_id)属性
+每个符号常量包含名字(name)属性和内部序号(\_id)属性(取决于符号变量创建次序)，可以用getText()，getId()方法获得。在Abaqus模块中类似符号变量，但实际是其他类型，例如：
+
+*abaqus.ABASOLUTE_ZERO_CELSIUS*  #摄氏温标绝对零度
+
+#### 2. 布尔值
+Abaqus模块和*abaqusConstants*模块中包含*ON/OFF*, *TRUE/FALSE*两组布尔值：*ON/OFF*是Abaqus自定义布尔类型；*TRUE/FALSE*是python的*True/False*的别名，为布尔型。脚本中用到ON, OFF的地方，都可以用*True, TRUE, False, FALSE*代替。
