@@ -17,12 +17,14 @@ Type "help", "copyright", "credits" or "license" for more information.”
 #### 1. 符号常量(symbolic constants)
 使用Abaqus内置符号常量需要载入***abaqus-Constants***模块，具体如下：
 
-(1) *from abaqusConstants import **    #载入符号常量模块中的**所有符号常量**
-
-(2) *from abaqusConstants import UNIFORM, ISOTROPIC*   #载入符号常量模块中的**指定符号常量**
-
-(3) *from abaqusConstants import (UNIFORM, ISOTROPIC, FINER, QUAD)*   #载入符号常量模块中的**指定符号常量**, Python推荐的方式
+(1) *from abaqusConstants import* *    #载入符号常量模块中的**所有符号常量**  
+(2) *from abaqusConstants import UNIFORM, ISOTROPIC*   #载入符号常量模块中的**指定符号常量**  
+(3) *from abaqusConstants import (UNIFORM, ISOTROPIC, FINER, QUAD)*   #载入符号常量模块中的**指定符号常量**, **Python推荐的方式**
 
 创建符号常量则需要***symbolicConstants***模块，具体如下：
 
-*import symbolicConstants*
+*import symbolicConstants*   
+*SNIPER = symbolicConstants.SymbolicConstants('SNIPER')*  
+*CRYSTAL_MAIDEN = symbolicConstants.SymbolicConstants('CRYSTAL_MAIDEN')*
+
+每个符号常量包含名字(name)属性和内部序号(_id)属性
