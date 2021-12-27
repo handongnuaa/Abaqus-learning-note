@@ -1,6 +1,9 @@
-[Abaqus内核脚本](#abaqus内核脚本)
-
 # Abaqus学习笔记
+[1. Python版本信息查询](#python版本信息查询)  
+[2. Abaqus内核脚本](#abaqus内核脚本)  
+[2.1 Abaqus内核脚本](#数据类型)
+
+
 Author: Dong HAN
 
 E-mail: handong_nuaa@163.com
@@ -16,7 +19,7 @@ Type "help", "copyright", "credits" or "license" for more information.”
 
 ## Abaqus内核脚本
 ### 数据类型
-#### 1. 符号常量(symbolic constants)
+#### 1. 符号常量
 使用Abaqus内置符号常量需要载入***abaqus-Constants***模块，具体如下：
 
 (1) *from abaqusConstants import* *    #载入符号常量模块中的**所有符号常量**  
