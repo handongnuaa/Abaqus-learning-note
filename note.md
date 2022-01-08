@@ -40,3 +40,23 @@ Type "help", "copyright", "credits" or "license" for more information.”
 
 #### 2. 布尔值
 Abaqus模块和*abaqusConstants*模块中包含*ON/OFF*, *TRUE/FALSE*两组布尔值：*ON/OFF*是Abaqus自定义布尔类型；*TRUE/FALSE*是python的*True/False*的别名，为布尔型。脚本中用到ON, OFF的地方，都可以用*True, TRUE, False, FALSE*代替。
+
+#### 3. 仓库
+Repository仓库对象是储存某个类的多个对象的容器，与Python的字典类型相似，均为映射型的数据类型。不同之处是，Repository只能通过构造函数实现构造。仓库对象有5中基本方法，包括：
+
+(1) *Repository.changeKey(fromName,toName)* **#改键的名字**  
+(2) *Repository.has_key(keyName)*  **#return ->bool 含有某键**  
+(3) *Repository.keys()*  **# return-> 键的列表**  
+(4) *Repository.values()*  **# return-> 键-值对象列表**  
+
+通常，仓库对象的keys(), values()和items()方法返回的是无序列表，但是部分仓库对象会返回有序列表，如steps分析步仓库。除了这5种基本方法，部分仓库对象还有其他方法。
+
+仓库对象的方式示例：
+
+mdb.models #模型仓库  
+m=mdb.Model['Model-demo'] #用mdb对象的Model()方法创建了一个新的模型，并添加到mdb对象的models属性中，返回Model对象
+
+## 问题记录
+(1) 什么是mdb对象？  
+
+Abaqus中有三大对象: Session, Mdb, Odb。可通过：“*from abaqus import **”命令载入并创建session, mdb和odb这三个对象。Mdb对象包括两大对象：jobs和models对象。
