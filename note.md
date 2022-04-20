@@ -12,7 +12,7 @@
 
 Author: Dong HAN
 
-E-mail: handong_nuaa@163.com
+E-mail: dong.han@nuaa.edu.cn
 
 College of Energy and Power Engineering, Nanjing University of Aeronautics and Astronautics, Nanjing 210016, China
 ## Python版本信息查询
